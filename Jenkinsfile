@@ -7,7 +7,7 @@ pipeline {
         stage('build the war file')
         {
             steps{
-                 sh 'cp ./target/hello-wildfly-1.0.war /home/abdo/hello-wildfly.backup'
+                 sh 'cp ./target/hello-wildfly-1.0.war ./backub'
                  sh 'mvn clean pacKage'
 
             }
