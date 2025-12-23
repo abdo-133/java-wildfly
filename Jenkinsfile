@@ -9,7 +9,7 @@ pipeline {
             steps{
              sh """
                  mvn clean package
-                 mkdir ./backup || true
+                 mkdir -p backup || true
                  cp target/hello-wildfly-1.0.war backup
                 """
 
