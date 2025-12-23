@@ -18,7 +18,7 @@ pipeline {
 
         stage('build docker image & push to dockerhub'){
             steps{
-                withCredentials([usernamePassword(credentialsId: 'dockerhub',passwordVariable: 'PASS',userVariable:'USER')]){
+                withCredentials([usernamePassword(credentialsId: 'dockerhub',passwordVariable: 'PASS',usernameVariable:'USER')]){
                     sh """
                        echo $PASS | docker login -u $USER --password-stdin 
                        docker rmi abdo133/java-web-app:v01 || true 
