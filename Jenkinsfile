@@ -7,6 +7,7 @@ pipeline {
         stage('build the war file')
         {
             steps{
+                
              sh """
                  mvn clean package
                  mkdir -p backup || true
